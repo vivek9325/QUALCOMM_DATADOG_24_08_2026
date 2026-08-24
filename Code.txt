@@ -1,2 +1,10 @@
-  5  curl -H "X-aws-ec2-metadata-token: $TOKEN"   http://169.254.169.254/latest/meta-data/instance-id
-    6  TOKEN=$(curl -s -X PUT -H "X-aws-ec2-metadata-token-ttl-seconds: 60" http://169.254.169.254/latest/api/token) && curl -s -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id
+ubuntu@ip-172-31-65-31:~$ TOKEN=$(curl -sS -X PUT \
+  -H "X-aws-ec2-metadata-token-ttl-seconds: 60" \
+  http://169.254.169.254/latest/api/token)
+
+curl -sS \
+  -H "X-aws-ec2-metadata-token: $TOKEN" \
+  http://169.254.169.254/latest/meta-data/instance-id
+i-04e9fb85887de0f26ubuntu@curl -sS \65-31:~$ curl -sS \
+  -H "X-aws-ec2-metadata-token: $TOKEN" \
+  http://169.254.169.254/latest/dynamic/instance-identity/document
