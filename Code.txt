@@ -17,9 +17,10 @@ pretest Link - https://forms.cloud.microsoft/r/WQjbN474rP
 root@ip-172-31-65-31:/etc/datadog-agent/conf.d/easytravel.d# cat conf.yaml
 logs:
   - type: file
-    path: /root/easytravel-2.0.0-x64
+    path: /root/.dynaTrace/easyTravel 2.0.0/easyTravel/log/*.log
     service: easytravel
     source: java
+
 root@ip-172-31-65-31:/etc/datadog-agent/conf.d/easytravel.d#
 
 
