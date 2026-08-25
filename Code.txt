@@ -33,3 +33,29 @@ logs_enabled: true
 
 
 
+
+
+
+
+import { datadogRum } from '@datadog/browser-rum';
+
+datadogRum.init({
+    applicationId: 'de3aece0-58a9-4a36-a422-2068676f3e73',
+    clientToken: 'pub04c02994a525ec351ebbeccbf8d89302',
+    site: 'uk1.datadoghq.com',
+    service: 'vk-easytravel',
+    env: 'dev',				// e.g. 'prod', 'staging-1', 'dev'
+    version: '1.0',	// e.g. '1.0.0'
+    sessionSampleRate: 100,			// capture 100% of sessions
+    sessionReplaySampleRate: 20,	// capture 20% of sessions with replay
+    trackResources: true,			// Enable Resource tracking
+    trackUserInteractions: true,	// Enable Action tracking
+    trackLongTasks: true,			// Enable Long Tasks tracking
+
+    // ----- Recommended Options -----
+    // allowedTracingUrls: '<BACKEND_URL>',		// Enable distributed tracing
+    // defaultPrivacyLevel: 'mask-user-input',	// 'mask-user-input' | 'allow' | 'mask'
+});
+
+
+
