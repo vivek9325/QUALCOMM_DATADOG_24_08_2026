@@ -90,3 +90,11 @@ datadogRum.init({
 https://www.debuggex.com/cheatsheet/regex/pcre
 
 https://regex101.com/
+
+
+
+[Wed Aug 26 10:55:39.526279 2026] [proxy:error] [pid 362401:tid 362401] AH00959: ap_proxy_connect_backend disabling worker for (localhost:9289) for 120s
+
+
+
+pid, tid, proxy, timestamp, localhost
